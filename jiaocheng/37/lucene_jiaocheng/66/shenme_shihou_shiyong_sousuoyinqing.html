@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>什么时候应该考虑使用搜索引擎?_lucene教程</title>
+    <meta name="keywords" content="什么时候应该考虑使用搜索引擎?" />
+    <meta name="description" content="什么时候应该考虑使用搜索引擎?" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--文章内容区-->
+<div class="container">
+    <div class="main">
+        <!--文章左侧菜单-->
+        <div class="cont_left" id="cont_left">
+            <div class="menu_left_title"><a href='/jiaocheng/37/lucene_jiaocheng.html' class='link_li'><b>lucene教程</b></a>
+</div>
+            <dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">资料<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/64/qianyan.html" >前言</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/65/lucene_shuji_tuijian.html" >lucene书籍推荐</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">lucene原理<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/72/sousuoyinqing_shishenme.html" >搜索引擎是什么</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/66/shenme_shihou_shiyong_sousuoyinqing.html"  class="on" >什么时候应该考虑使用搜索引擎?</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/67/lucene_shishenme.html" >lucene是什么</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/68/lucene_mysql_oracle_qubie.html" >lucene、mysql、oracle的区别？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/69/solr_shishenme_elasticsearch_shishenme.html" >Solr是什么？ElasticSearch是什么？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/70/solr_elasticsearch_de_qubie.html" >solr与elasticsearch的区别？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/71/lucene_yuanli_shishenme.html" >lucene原理是什么？</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">lucene快速使用<img src="/images/arrows.png" alt=""></dt>
+</dl>
+
+        </div>
+        <!--移动端菜单切换-->
+        <div class="mobile_list" onclick="toggleMenu('cont_left','cont_right')"><img src="/images/menu_list.png" alt=""></div>
+        <!--右侧文章内容-->
+        <div class="cont_right page_style" id="cont_right">
+            <h2 class="book_title">什么时候应该考虑使用搜索引擎?_lucene教程</h2>
+            <h2>第一点：有搜索功能的需求</h2>
+<p>想为App、网站添加类似”百度搜索的服务”搜索自家资源；想为用户提供类似”百度搜索的服务”搜索自家资源。</p>
+<h2>第二点: 对搜索速度有要求</h2>
+<p>有时会遇到mysql数据库搜索的速度过慢。举一个例子，使用数据库提供的like ‘%关键词%’功能，在一亿篇文档中检索，将会耗时几小时才能查找出结果。而搜索引擎则能做到几十毫秒查询到结果。</p>
+<p>mysql数据库的like查询会顺序扫描每一个数据记录，所谓顺序扫描，就是一个记录一个记录的查询扫描，对于每一个记录，从头看到尾，一个字符一个字符的检测是否包含被查询字符串。假设每扫描一万记录耗时一秒，扫描一亿条记录，约耗时一万秒，约三小时。</p>
+<h2>第三点：对搜索结果的质量有要求</h2>
+<p>假设一电商平台，用户搜索关键词”华为手机”搜出5000个商品。因为商品数据太多，可以用分页技术把数据展示给用户，但是一般用户也就查看前三页，总计几十个的商品。这说明只有极小一部分商品数据才能被用户看到，而5000个商品可能只有一小部分可能被用户感兴趣，如何尽量让用户可能感兴趣的商品排在前面，从而让用户看到他们可能感兴趣的商品？</p>
+<p>如果排在前面展示的商品都是用户不感兴趣的，而用户感兴趣的商品都展示在页码靠后的页面，那用户体验太糟糕了。[说句题外话，对于不同用户，由于身份，阅历不同，对待同一商品的满意程度是不一致的。这是更深层次的搜索功能。]。</p>
+<p>Lucene会通过评分模型为搜索词与每一个被搜索出来商品一一计算一个相关度，相关度越大说明搜索词与商品之间的关系越大。然后商品按照与搜索词的相关度排序，和搜索词相关度大的排在前面，越靠前的商品与搜索词相关度越高，关系越大，而关键词又是用户输入的，自然靠前的商品越有可能是用户感兴趣的商品。</p>
+            <div class="next_page"><a id="prev" href="/jiaocheng/37/lucene_jiaocheng/72/sousuoyinqing_shishenme.html">上一章</a><a id="next" href="/jiaocheng/37/lucene_jiaocheng/67/lucene_shishenme.html">下一章</a></div>
+        </div>
+    </div>
+</div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

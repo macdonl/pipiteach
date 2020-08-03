@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>[###SeoTitle###]</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="bookmark" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="../images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--文章内容区-->
+<div class="container">
+    <div class="main">
+        <!--文章左侧菜单-->
+        <div class="cont_left" id="cont_left">
+            <div class="menu_left_title">入门教程</div>
+            <dl class="menu_left_list">
+                <dt onclick="flexMenu(event)">第一篇 课前准备<img src="/images/arrows.png" alt=""></dt>
+                <dd><a href="#" class="on">我们会做出什么东西？</a></dd>
+                <dd><a href="#">前置知识</a></dd>
+            </dl>
+            <dl class="menu_left_list">
+                <dt onclick="flexMenu(event)">第二篇 概览<img src="/images/arrows.png" alt=""></dt>
+                <dd><a href="#">阅读初始代码</a></dd>
+                <dd><a href="#">通过props传递参数</a></dd>
+                <dd><a href="#">给组建添加交互功能</a></dd>
+                <dd><a href="#">开发者工具</a></dd>
+            </dl>
+            <dl class="menu_left_list">
+                <dt onclick="flexMenu(event)">第三篇 功能完善<img src="/images/arrows.png" alt=""></dt>
+                <dd><a href="#">状态提升</a></dd>
+                <dd><a href="#">函数式组建</a></dd>
+                <dd><a href="#">轮流落子</a></dd>
+                <dd><a href="#">判断胜出者</a></dd>
+            </dl>
+        </div>
+        <!--移动端菜单切换-->
+        <div class="mobile_list" onclick="toggleMenu('cont_left','cont_right')"><img src="/images/menu_list.png" alt=""></div>
+        <!--右侧文章内容-->
+        <div class="cont_right" id="cont_right">
+            <h2 class="book_title">书籍名 &gt; 小节名</h2>
+            <p>你可以提前预览我们要写的游戏的最终效果。如果你看不懂其中的代码，或不熟悉这些语法，别担心！接下来的教程会一步一步帮助你理解 React 及其语法。</p>
+            <p>在继续后面的教程之前，推荐你先玩一下这个井字棋。在游戏里，你会看到游戏面板的右边有一个标有序号的列表。这个列表记录了游戏中的每个步骤，并且会随着游戏的进行不断更新。</p>
+            <p>等你熟悉游戏功能，便可关掉它！我们会在一个简单的模板上开始写起。下一步就是帮做好准备工作，这样你就可以开始游戏开发了。</p>
+            <h1>前置知识</h1>
+            <p>我们假定你已经对 HTML 和 JavaScript 都比较熟悉了。即便你之前使用其他编程语言，你也可以跟上这篇教程的。除此之外，我们假定你也已经熟悉了一些编程的概念，例如，函数、对象、数组，以及 class 的一些内容。</p>
+            <p>如果你想回顾一下 JavaScript，你可以阅读这篇教程。注意，我们也用到了一些 ES6（较新的 JavaScript 版本）的特性。在这篇教程里，我们主要使用了箭头函数（arrow functions）、class、let 语句和 const 语句。你可以使用 Babel REPL 在线预览 ES6 的编译结果。</p>
+            <p>前文中的 ShoppingList 组件只会渲染一些内置的 DOM 组件，如等。但是你也可以组合和渲染自定义的 React 组件。例如，你可以通过来表示整个购物清单组件。每个组件都是封装好的，并且可以单独运行，这样你就可以通过组合简单的组件来构建复杂的 UI 界面。</p>
+            <p>你可能会想，我们也可以在棋盘 Board 组件中收集每个格子 Square 组件中的 state。虽然技术上来讲是可以实现的，但是代码如此编写会让人很难理解，并且我们以后想要维护重构时也会非常困难。所以，最好的解决方式是直接将所有的 state 状态数据存储在 Board 父组件当中。之后 Board 组件可以将这些数据通过 props 传递给各个 Square 子组件，正如上文我们把数字传递给每一个 Square 一样。</p>
+            <p>除了数字发生了改变之外，阅读这段代码的人也许会认为我们把 Alexa 和 Ben 的顺序交换了位置，然后把 Claudia 插入到 Alexa 和 Ben 之间。然而，React 是电脑程序，它并不知道我们想要什么。因为 React 无法得知我们人类的意图，所以我们需要给每一个列表项一个确定的 key 属性，它可以用来区分不同的列表项和他们的同级兄弟列表项。你可以使用字符串，比如 alexa, ben, claudia。如果我们使用从数据库里获取的数据，那么 Alexa、Ben 和 Claudia 的数据库 ID 就可以作为 key 来使用。</p>
+            <p>每当一个列表重新渲染时，React 会根据每一项列表元素的 key 来检索上一次渲染时与每个 key 所匹配的列表项。如果 React 发现当前的列表有一个之前不存在的 key，那么就会创建出一个新的组件。如果 React 发现和之前对比少了一个 key，那么就会销毁之前对应的组件。如果一个组件的 key 发生了变化，这个组件会被销毁，然后使用新的 state 重新创建一份。</p>
+            <p>key 是 React 中一个特殊的保留属性（还有一个是 ref，拥有更高级的特性）。当 React 元素被创建出来的时候，React 会提取出 key 属性，然后把 key 直接存储在返回的元素上。虽然 key 看起来好像是 props 中的一个，但是你不能通过 this.props.key 来获取 key。React 会通过 key 来自动判断哪些组件需要更新。组件是不能访问到它的 key 的。</p>
+            <p>如果你没有指定任何 key，React 会发出警告，并且会把数组的索引当作默认的 key。但是如果想要对列表进行重新排序、新增、删除操作时，把数组索引作为 key 是有问题的。显式地使用 key={i} 来指定 key 确实会消除警告，但是仍然和数组索引存在同样的问题，所以大多数情况下最好不要这么做。</p>
+            <div class="next_page">
+                <a href="#" id="prev">上一页</a>
+                <a href="#" id="next">下一页</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="scrolltotop" id="scrolltotop"><img src="../images/arrows2.png" alt=""></div>
+<script src="../js/jQuery.js"></script>
+<script src="../js/js.js"></script>
+<script id="common_auto_login_js" src="../js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

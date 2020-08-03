@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lucene、mysql、oracle的区别？_lucene教程</title>
+    <meta name="keywords" content="lucene、mysql、oracle的区别？" />
+    <meta name="description" content="lucene、mysql、oracle的区别？" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--文章内容区-->
+<div class="container">
+    <div class="main">
+        <!--文章左侧菜单-->
+        <div class="cont_left" id="cont_left">
+            <div class="menu_left_title"><a href='/jiaocheng/37/lucene_jiaocheng.html' class='link_li'><b>lucene教程</b></a>
+</div>
+            <dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">资料<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/64/qianyan.html" >前言</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/65/lucene_shuji_tuijian.html" >lucene书籍推荐</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">lucene原理<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/72/sousuoyinqing_shishenme.html" >搜索引擎是什么</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/66/shenme_shihou_shiyong_sousuoyinqing.html" >什么时候应该考虑使用搜索引擎?</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/67/lucene_shishenme.html" >lucene是什么</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/68/lucene_mysql_oracle_qubie.html"  class="on" >lucene、mysql、oracle的区别？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/69/solr_shishenme_elasticsearch_shishenme.html" >Solr是什么？ElasticSearch是什么？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/70/solr_elasticsearch_de_qubie.html" >solr与elasticsearch的区别？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/71/lucene_yuanli_shishenme.html" >lucene原理是什么？</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">lucene快速使用<img src="/images/arrows.png" alt=""></dt>
+</dl>
+
+        </div>
+        <!--移动端菜单切换-->
+        <div class="mobile_list" onclick="toggleMenu('cont_left','cont_right')"><img src="/images/menu_list.png" alt=""></div>
+        <!--右侧文章内容-->
+        <div class="cont_right page_style" id="cont_right">
+            <h2 class="book_title">lucene、mysql、oracle的区别？_lucene教程</h2>
+            <p>lucene是搜索引擎，mysql、oracle是关系型数据库，问lucene与mysql的区别，不如问搜索引擎与关系型数据库的区别</p>
+<table class="common-table">
+<tbody>
+<tr>
+<th><br/></th><th>搜索引擎<br/></th><th>关系型数据库<br/></th></tr>
+<tr>
+<td>搜索速度<br/></td>
+<td>亿级数据量，可以保持在几十毫秒内查询出结果<br/></td>
+<td>亿级数据量，不能很好支持查询like查询<br/></td>
+</tr>
+<tr>
+<td>搜索质量<br/></td>
+<td>搜索质量高。有评分模型，使得搜索结果中与搜索词相关度较高的结果排前面返回<br/></td>
+<td>搜索质量较差。数据库一般不关注搜索质量。数据库着重于对数据资源的管理。具体来说是增删改查, ACID。一般，数据库提供按照数字大小，字符编码进行排序的功能。<br/></td>
+</tr>
+<tr>
+<td>维护数据与数据之间的关系的能力<br/></td>
+<td>弱<br/></td>
+<td>专业<br/></td>
+</tr>
+</tbody>
+</table>
+            <div class="next_page"><a id="prev" href="/jiaocheng/37/lucene_jiaocheng/67/lucene_shishenme.html">上一章</a><a id="next" href="/jiaocheng/37/lucene_jiaocheng/69/solr_shishenme_elasticsearch_shishenme.html">下一章</a></div>
+        </div>
+    </div>
+</div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

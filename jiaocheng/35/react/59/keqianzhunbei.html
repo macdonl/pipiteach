@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>课前准备_react教程</title>
+    <meta name="keywords" content="课前准备" />
+    <meta name="description" content="课前准备" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--文章内容区-->
+<div class="container">
+    <div class="main">
+        <!--文章左侧菜单-->
+        <div class="cont_left" id="cont_left">
+            <div class="menu_left_title"><a href='/jiaocheng/35/react.html' class='link_li'><b>react教程</b></a>
+</div>
+            <dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">课前准备<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/35/react/60/dier-jiexuan.html" >第二节选</a></dd>
+       <dd><a href="/jiaocheng/35/react/59/keqianzhunbei.html"  class="on" >课前准备</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">课后复习<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/35/react/61/Spring道面试题.html" >Spring 69道面试题</a></dd>
+       <dd><a href="/jiaocheng/35/react/62/测试表格.html" >测试表格</a></dd>
+       <dd><a href="/jiaocheng/35/react/63/测试自定义.html" >测试自定义</a></dd>
+</dl>
+
+        </div>
+        <!--移动端菜单切换-->
+        <div class="mobile_list" onclick="toggleMenu('cont_left','cont_right')"><img src="/images/menu_list.png" alt=""></div>
+        <!--右侧文章内容-->
+        <div class="cont_right page_style" id="cont_right">
+            <h2 class="book_title">课前准备_react教程</h2>
+            <p>我们将会在这个教程中开发一个小游戏。<span style="font-weight: bold; font-size: large;">你可能并不打算做游戏开发，然后就直接跳过了这个教程——但是不妨尝试一下！</span>你将在该教程中学到关于构建 React 应用的基础知识，掌握这些知识后，你将会对 React 有更加深刻的理解。</p>
+<blockquote><p>提示</p>
+<p>这篇教程适用于更喜欢<strong>边学边做</strong>的开发者，如果你更喜欢从头开始学习一些概念，请参考<a href="http://undefined">逐步学习指南</a>。你会发现这篇教程和逐步学习指南是互补的。</p>
+</blockquote><p><br/></p>
+<p><br/></p>
+<p>这篇教程分为以下几个部分：<br/><span style="background-color: rgb(249, 150, 59);">环境准备是学习该教程的起点。<br/>概览介绍了 React 的基础知识：组件、props 和 state。<br/>游戏完善介绍了在 React 开发过程中最常用的技术。<br/>时间旅行可以让你更加深刻地了解 React 的独特优势。</span></p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><br/></p>
+<pre><code>function Greeting(props) {<br/> &nbsp;const isLoggedIn = props.isLoggedIn;<br/> &nbsp;if (isLoggedIn) {<br/> &nbsp; &nbsp;return &lt;UserGreeting /&gt;;<br/> &nbsp;}<br/> &nbsp;return &lt;GuestGreeting /&gt;;<br/>}<br/><br/>ReactDOM.render(<br/> &nbsp;// Try changing to isLoggedIn={true}:<br/> &nbsp;&lt;Greeting isLoggedIn={false} /&gt;,<br/> &nbsp;document.getElementById(&#39;root&#39;)<br/>);</code></pre><p><br/></p>
+<p>课前准备</p>
+<p>之所以能这样做，是因为在 JavaScript 中，<code style="background-color: rgb(139, 170, 74);">true &amp;&amp; expression</code>&nbsp;总是会返回&nbsp;<code>expression</code>, 而&nbsp;<code>false &amp;&amp; expression</code>&nbsp;总是会返回&nbsp;<code>false</code>。&nbsp;&nbsp;<br/></p>
+<p><span style="text-decoration-line: underline;"></span><br/></p>
+<blockquote>11111</blockquote><p><br/></p>
+<p><br/></p>
+<blockquote><p>注意</p>
+<p><span style="font-size: 16px; text-decoration-line: underline;">本指南的示例中偶尔会使用一些 JavaScript 新语法。</span></p>
+<p><span style="font-size: 16px; text-decoration-line: line-through;">如果你在过去几年中并没有使用过 JavaScript，大多数情</span></p>
+</blockquote><p><img style="display:block;" src="http://47.94.230.44:80/File/FileDownload?fileId=44b262a0-b619-4ef4-a0b0-671073839703"/></p>
+<p><br/></p>
+<p><br/></p>
+<p><img style="display:block;" src="http://47.94.230.44:80/File/FileDownload?fileId=e0e2bc1b-c5f1-4b1b-807b-7610e1ab8f83"/></p>
+            <div class="next_page"><a id="prev" href="/jiaocheng/35/react/60/dier-jiexuan.html">上一章</a><a id="next" href="/jiaocheng/35/react/61/Spring道面试题.html">下一章</a></div>
+        </div>
+    </div>
+</div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>目录管理页-教程书</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body id="body">
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/course/lucene_course.html" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--内容区-->
+<div class="forum">
+    <div class="t course_t"><h1 id="book_name">书籍名称占位符</h1><div><a href="#" class="c_btn c_btn_imp"  onclick="addCourse()">添加章</a><a href="javascript:void(0)" onclick="javascript:location.href='/course/course_publish.html'" class="c_btn">返回</a></div></div>
+    <div id="chapter_list"></div>
+    <script type="text/template" id="chapter_list_template">
+        {{if BookChapterDTOList&&BookChapterDTOList.length}}
+        <ul class="course_add_1">
+            {{each BookChapterDTOList as item}}
+            <li>
+                <div class="m" onclick="flexMenu(event)" id="{{item.BookChapterId}}">
+                    <a href="#">{{item.BookChapterName}}<img src="/images/arrows.png" alt=""></a>
+                    <img src="/images/delete2.png" alt="删除" onclick="deletePopBox(0)">
+                    <img src="/images/up2.png" alt="升序" onclick="sectionSortUp(0)">
+                    <img src="/images/modify2.png" onclick="modifyCourse(0)" alt="修改">
+                </div>
+                <ul class="course_add_2">
+                    {{if item.BookSectionDTOList&&item.BookSectionDTOList.length}}
+                        {{each item.BookSectionDTOList as value}}
+                            <li>
+                                <div id="{{value.BookSectionId}}">
+                                    <a href="./course_publish3.html?BookChapterId={{value.BookChapterId}}&BookSectionId={{value.BookSectionId}}">{{value.BookSectionName}}</a>
+                                    <img src="/images/delete.png" alt="删除" onclick="deletePopBox(1)">
+                                    <img src="/images/up.png" alt="升序" onclick="sectionSortUp(1)">
+                                    <img src="/images/modify.png" onclick="javasript:location.href='/course/course_publish3.html?BookChapterId={{value.BookChapterId}}&BookSectionId={{value.BookSectionId}}'" alt="修改">
+                                    <img src="/images/view.png" onclick="javasript:jumpToBookSectionPage('{{value.BookSectionId}}')" alt="查看">
+                                </div>
+                            </li>
+                        {{/each}}
+                    {{/if}}
+                    <li class="add" onclick="addChapter(1)">
+                        + 添加节
+                    </li>
+                </ul>
+
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <div class="no_data"><img src="/images/nodata.jpg" width="250" align="暂无文章"></div>
+        {{/if}}
+    </script>
+    <div id="chapter_container"></div>
+
+
+</div>
+<div id="pop_box_container" style="display: none"></div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/template.js"></script>
+<script src="/js/js.js"></script>
+<script src="/js/course/course_publish2.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

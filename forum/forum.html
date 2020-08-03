@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>论坛-教程书</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/">教程</a></li>
+        <li><a href="/forum/forum.html" class="on">论坛</a></li>
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+</div>
+<!--论坛内容区-->
+<div class="forum">
+    <div class="t"><h1>精彩帖子</h1><a href="publish_post.html" class="btn_important">发帖</a></div>
+    <div id="article_list"></div>
+    <!--分页-->
+    <div class="paging" id="paging"></div>
+</div>
+<script type="text/template" id="article_list_template">
+    {{if BbsArticleDTOPageInformation&&BbsArticleDTOPageInformation.length}}
+        <ul class="forum_page_list">
+            {{each BbsArticleDTOPageInformation as item}}
+                <li>
+                    <a href="./forum_detail.html?BbsArticleId={{item.BbsArticleId}}">
+                        <div class="p_titel"><img src="/images/dialog.png" alt="帖子">{{item.Title}}<span>{{item.NumberOfComment}}条评论</span></div>
+                        <div class="p_time">{{item.CreateTime}}</div>
+                        <div class="p_author">by: {{item.UserName}}</div>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <div class="">暂无帖子</div>
+    {{/if}}
+</script>
+<div id="pop_box_container" style="display: none"></div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/template.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+<script src="/js/bbs/forum.js"></script>
+</body>
+</html>

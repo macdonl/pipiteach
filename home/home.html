@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>我的主页-教程书</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<div class="forum home">
+    <div class="home_left" id="home_left">
+        <div class="info"><img src="/images/head.png" alt=""><h1 id="user_name"></h1></div>
+        <ul class="home_menu">
+            <li><a href="#">我收藏的教程</a></li>
+            <li><a href="/course/course_publish.html">管理我的教程</a></li>
+            <li><a href="#" class="on">我的帖子</a></li>
+            <li><a href="#">我的评论</a></li>
+        </ul>
+    </div>
+    <!--移动端菜单切换-->
+    <div class="mobile_list" onclick="toggleMenu('home_left','home_right')"><img src="/images/menu_list.png" alt=""></div>
+    <div class="home_right">
+        <div id="home_right"></div>
+        <!--分页-->
+        <div class="paging" id="paging"></div>
+    </div>
+</div>
+<!--我的帖子-->
+<script type="text/template" id="article_list_template">
+    {{if BbsArticleDTOList&&BbsArticleDTOList.length}}
+        <div class="t">我的帖子</div>
+            <ul class="home_list">
+                {{each BbsArticleDTOList as item}}
+                    <li>
+                        <a href="/forum/forum_detail.html?BbsArticleId={{item.BbsArticleId}}">
+                            <div class="p_titel">{{item.Title}}</div>
+                            <div class="p_time">{{item.CreateTime}}</div>
+                        </a>
+                    </li>
+                {{/each}}
+        </ul>
+    {{else}}
+        <div>暂无帖子</div>
+    {{/if}}
+</script>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/template.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+<script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>教程管理-教程书</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body id="body">
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/course/lucene_course.html" class="on">教程</a></li>
+        <li><a href="/forum/forum.html">论坛</a></li>
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--内容区-->
+<div class="forum">
+    <div class="t course_t"><h1>我的教程列表</h1><div><input type="text" class="c_txt" placeholder="请输入教程名称"><input type="button" class="c_btn" value="搜索"></div></div>
+    <div id="course_list"></div>
+    <script type="text/template" id="course_list_template">
+
+        <ul class="course_manage">
+            {{if BookDTOList&&BookDTOList.length}}
+                {{each BookDTOList as item}}
+                <li>
+                    <a target="_blank" href="/course/course_publish2.html?BookId={{item.BookId}}"><h1>{{item.BookName}}</h1></a>
+                    <div>
+                        <!--修改书籍详情-->
+                        <span class="modify" onclick="modifyCourse()"></span>
+                        <!--跳转到书籍章节管理页面--><!--TODO 图标-->
+                        <span class="detail" onclick="javascript:window.open('/course/course_publish2.html?BookId={{item.BookId}}')"></span>
+                        <!--跳转到用户看到的教程页--><!--TODO 图标-->
+                        <span class="view" onclick="javascript:window.open('/jiaocheng/{{item.Id}}/{{item.SeoUrl}}.html')"></span>
+                        <span class="delete" onclick="deletePopBox()"></span>
+                    </div>
+                </li>
+                {{/each}}
+            {{/if}}
+            <li>
+                <a href="#" class="add" onclick="addCourse()">+</a>
+            </li>
+        </ul>
+
+    </script>
+    <div id="course_container"></div>
+</div>
+<div id="pop_box_container" style="display: none"></div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/template.js"></script>
+<script type="text/javascript" src='/framework/editor/release/wangEditor.min.js'></script>
+<script src="/js/js.js"></script>
+<script src="/js/course/course_publish.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+
+</body>
+</html>

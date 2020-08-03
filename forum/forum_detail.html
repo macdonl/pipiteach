@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>帖子详情-教程书</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/">教程</a></li>
+        <li><a href="/forum/forum.html" class="on">论坛</a></li>
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+论坛内容区
+<div class="forum">
+    <!--文章内容-->
+    <div id="article_details"></div>
+    <script type="text/template" id="article_details_template">
+        <h1 class="forum_title">{{BbsArticleDTO.Title}}</h1>
+        <div class="forum_title_info"><span>by：{{BbsArticleDTO.UserName}}</span><span>{{BbsArticleDTO.CreateTime}}</span></div>
+        <div class="forum_detail" id="post_content">
+        </div>
+    </script>
+    <!--一级评论-->
+    <div class="forum_comment">评论</div>
+    <div class="input_reply input_reply2">
+        <input type="text" name="comment_val" contenteditable="true" value="" placeholder="请输入评论"><button onclick="commentArticle()">评论</button>
+    </div>
+    <div id="comment_list"></div>
+    <script type="text/template" id="comment_list_template">
+        {{if BbsArticleCommentDTOInformation&&BbsArticleCommentDTOInformation.length}}
+            <ul class="forum_comment_list">
+                {{each BbsArticleCommentDTOInformation as item}}
+                <li>
+                    <div class="head">
+                        <img src="/images/head.png" alt="">
+                    </div>
+                    <div class="cont" id="{{item.BbsArticleCommentId}}">
+                        <div class="comment"><span class="name">{{item.FromUserName}} ：</span><span>{{item.Content}}</span></div>
+                        <div class="reply">
+                            <span class="time">{{item.CreateTime}}</span>
+                            <a href="javscript:void(0)" onclick="commentInput()" >回复</a>
+                            <a href="javscript:void(0)" onclick="showReply()" class="show_reply">{{item.BbsArticleCommentDTOList.TotalDataCount}}条回复</a>
+                        </div>
+                        <div class="input_reply">
+                            <input type="text" name="comment_val" contenteditable="true" value="" placeholder="请输入评论"><button onclick="replyComment(0)">评论</button>
+                        </div>
+                    </div>
+                    <div class="reply_comment"><!--二级评论-->
+                        {{if item.BbsArticleCommentDTOList.Data&&item.BbsArticleCommentDTOList.Data.length}}
+                        {{each item.BbsArticleCommentDTOList.Data as item}}
+                        <div class="cont border">
+                            <div class=""><span class="name">{{item.FromUserName}} <label>回复</label>{{item.ToUserName}} ：</span><span>{{item.Content}} </span></div>
+                            <div class="reply"><span class="time">{{item.CreateTime}}</span><a href="javscript:void(0)" onclick="commentInput()">回复</a></div>
+                            <div class="input_reply">
+                                <input type="text" name="comment_val" contenteditable="true" value="" placeholder="请输入评论"><button onclick="replyComment()">评论</button>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+                </li>
+                {{/each}}
+             </ul>
+        {{/if}}
+    </script>
+    <ul class="forum_comment_list">
+        <li onclick="getMoreComment()" id="get_more_comment">显示更多评论</li>
+    </ul>
+
+</div>
+
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/template.js"></script>
+<script src="/js/bbs/forum_detail.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+
+</body>
+</html>

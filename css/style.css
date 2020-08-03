@@ -1,0 +1,1073 @@
+body{
+    background: #fafafa;
+}
+html,body{
+    height: 100%;
+}
+/*通用顶部导航*/
+.nav{
+    width: 100%;
+    height: 50px;
+    background: #272d33;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99999;
+    top:0;
+    left: 0;
+}
+.nav_menu li,.nav div{
+    float: left;
+    line-height: 50px;
+}
+.nav_menu li{
+    margin: 0 0 0 30px;
+}
+.nav_login span{
+    color: #fff;
+}
+.nav_login span:hover{
+    color: #fb6b25;
+}
+.nav div.nav_login{
+    float: right;
+    margin: 0 20px 0 0;
+    position: relative;
+}
+.nav_login span.myhead{
+    margin: 8px 0 0 30px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../images/nav_head1.png") no-repeat;
+    background-size: contain;
+}
+.nav_login span.myhead:hover{
+    background: url("../images/nav_head2.png") no-repeat;
+    background-size: contain;
+}
+.tips{
+    display: inline-block;
+    background: #fb6b25;
+    color: #fff;
+    border-radius: 10px;
+    height: 18px;
+    padding: 0 5px;
+    line-height: 18px;
+    font-size: 12px;
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    cursor: pointer;
+}
+.nav_logo a{
+    color: #fb6b25;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.nav_menu a,.nav_login a{
+    color: #fff;
+    display: inline-block;
+    height: 47px;
+    font-size: 16px;
+}
+.nav_menu a:hover,.nav_menu a.on{
+    color: #fb6b25;
+    border-bottom: 3px solid #fb6b25;
+}
+/*教程列表页*/
+.course_list{
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.course_list h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.course_list ul{
+    overflow: hidden;
+}
+.course_list_item{
+    width: 30%;
+    height: 90px;
+    float: left;
+    margin: 0 3% 10px 0;
+}
+.course_list_item a{
+    display: block;
+    background: #fafafa;
+    position: relative;
+    padding: 10px 20px 10px 80px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.course_list_item a:hover{
+    background: #f1f1f1;
+}
+.course_list_item img{
+    width: 40px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.cont_right .course_list_item h3{
+    font-size: 16px;
+}
+.cont_right .course_list_item p{
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+    margin: 0;
+}
+.cont_right h2.book_title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border:1px solid #eee;
+    background: #fafafa;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+}
+.next_page{
+    margin-top: 50px;
+}
+.next_page a{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    /*margin-right: 50px;*/
+    color: #666;
+}
+.next_page a:hover{
+    background: #f5f5f5;
+}
+.all_course{
+    margin-top: 70px;
+    background: #fff;
+    width: 95%;
+    border:1px solid #f1f1f1;
+    padding-left: 20px;
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.all_course img{
+    width: 16px;
+    vertical-align: -2px;
+    margin-right: 4px;
+}
+.course_menu_list{
+    box-sizing: border-box;
+    width: 95%;
+    border:1px solid #f1f1f1;
+    border-bottom: none;
+}
+.course_menu_list dd{
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    border-bottom:1px solid #f1f1f1;
+    cursor: pointer;
+}
+.course_menu_list dd:hover{
+    background: #fafafa;
+}
+.course_menu_list dd.on:after{
+    content: ' >';
+}
+
+ /*文章内容区 框架*/
+.container{
+    width: 100%;
+}
+.main{
+    width: 1200px;
+    margin: 50px auto 0 auto;
+    overflow: hidden;
+}
+.cont_left{
+    width: 248px;
+    float: left;
+}
+.cont_right{
+    width: 950px;
+    min-height: 800px;
+    float: left;
+    background: #fff;
+    border-left:1px solid #f1f1f1;
+    border-right:1px solid #f1f1f1;
+    padding: 70px 50px;
+    box-sizing: border-box;
+}
+.cont_right h1{
+    margin: 40px 0 20px 0;
+}
+.cont_right p{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+/*文章内容区 文章样式*/
+.cont_right.article_style pre{
+    background: #f5f5f5;
+    border: 1px dotted #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.cont_right.article_style blockquote{
+    background: #fff4e8;
+    border-left: 4px solid #f5ceac;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+/*文章内容区 左侧菜单*/
+.cont_left a{
+    color: #333;
+    font-size: 16px;
+}
+.menu_left_title{
+    margin: 70px 0 20px 0 ;
+}
+.menu_left_title a b{
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu_left_list{
+    line-height: 40px;
+}
+.menu_left_list img{
+    width: 12px;
+    vertical-align: -10px;
+    margin-left: 5px;
+}
+.menu_left_list dt{
+    cursor: pointer;
+    font-size: 16px;
+}
+.menu_left_list dd a{
+    line-height: 40px;
+    border-left: 3px solid #fafafa;
+    padding-left: 10px;
+}
+.menu_left_list dd a:hover,.menu_left_list dd a.on{
+    border-left: 3px solid #fb6b25;
+    color: #fb6b25;
+}
+.mobile_list{
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    display: none;
+    z-index: 999;
+}
+.mobile_list img{
+    width: 60px;
+}
+/*论坛*/
+.forum{
+    width: 1200px;
+    height: auto;
+    margin: 50px auto 0 auto;
+    background: #fff;
+    padding: 70px 50px 70px 50px;
+    box-sizing: border-box;
+    border-left:1px solid #f1f1f1;
+    border-right:1px solid #f1f1f1;
+    overflow: hidden;
+}
+.forum .t{
+    overflow: hidden;
+}
+.forum .t h1{
+    float: left;
+    font-size: 16px;
+}
+.forum .t a{
+    float: right;
+}
+.forum_page_list a{
+    display: block;
+    background: #fafafa;
+    overflow: hidden;
+    padding: 20px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.forum_page_list a:hover{
+    background: #f1f1f1;
+}
+.forum_page_list a:hover .p_titel{
+    color: #666;
+}
+.forum_page_list .p_titel{
+    width: 70%;
+    float: left;
+    font-size: 18px;
+}
+.forum_page_list .p_titel span{
+    color: #999;
+    margin-left: 20px;
+}
+.forum_page_list .p_time{
+    width: 20%;
+    float: left;
+    color: #999;
+}
+.forum_page_list .p_author{
+    width: 10%;
+    float: left;
+    text-align: right;
+    color: #999;
+}
+.forum_page_list .p_titel img{
+    width: 18px;
+    vertical-align: -2px;
+    margin-right: 5px;
+    opacity: 0.8;
+}
+.paging{
+    text-align: center;
+}
+.paging span{
+    display: inline-block;
+    text-align: center;
+    min-width: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #fff;
+    color: #666;
+}
+.paging span:hover{
+    background: #f1f1f1;
+}
+.paging span.on{
+    background: #ccc;
+}
+.forum_title{
+    text-align: center;
+}
+.forum_title_info{
+    text-align: center;
+    margin-top: 10px;
+}
+.forum_title_info span{
+    margin: 0 20px;
+    color: #999;
+}
+.forum_detail{
+    line-height: 30px;
+    margin-top: 30px;
+}
+.forum_detail img{
+
+}
+.forum_comment{
+    border-bottom: 1px dashed #aaaaaa;
+    margin: 50px 0 20px 0;
+    font-weight: bold;
+    line-height: 30px;
+}
+.forum_comment_list li{
+    background: #fafafa;
+    padding: 10px 30px 10px 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.forum_comment_list .head{
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    text-align: center;
+}
+.forum_comment_list .head img{
+    width: 40px;
+}
+.forum_comment_list .cont{
+    width: 100%;
+    padding: 5px 0;
+    float: left;
+}
+.forum_comment_list .cont.border{
+    border-top:1px dotted #aaa;
+}
+.forum_comment_list .cont span,.forum_comment_list .cont a{
+    color: #666;
+    line-height: 23px;
+}
+.forum_comment_list .cont span.name{
+    font-weight: bold;
+}
+.forum_comment_list .cont .reply{
+    overflow: hidden;
+    margin-top: 5px;
+}
+.forum_comment_list .cont .time{
+    float: left;
+    font-size: 12px;
+    color: #999;
+}
+.forum_comment_list .cont a{
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+.forum_comment_list .cont a.show_reply{
+    margin-right: 50px;
+    color: #fb6b25;
+}
+.forum_comment_list .cont a:hover{
+    color: #fb6b25;
+}
+.forum_comment_list .cont .name label{
+    font-size: 12px;
+    color: #999;
+    margin: 0 3px;
+}
+.reply_comment{
+    display: none;
+}
+#get_more_comment{
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    color: #666;
+    cursor: pointer;
+}
+.nodata{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #666;
+}
+.no_data{
+    width: 100%;
+    text-align: center;
+}
+.input_reply{
+    position: relative;
+    overflow: hidden;
+    padding-right: 80px;
+    margin: 10px 0;
+    display: none;
+}
+.input_reply.input_reply2{
+    display: block;
+}
+.input_reply input{
+    height: 33px;
+    width: 100%;
+    line-height: 33px;
+    padding-left: 10px;
+    border:1px solid #ddd;
+    color: #666;
+}
+.input_reply button{
+    height: 35px;
+    width: 60px;
+    border-radius: 3px;
+    border: 0;
+    background: #aaa;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.publish_post .ipt{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.publish_post .textarea{
+    width: 100%;
+    height: 500px;
+    line-height: 40px;
+}
+.publish_post li{
+    margin: 20px 0;
+}
+.forum_publish_cont{
+    border: 1px solid #ddd;
+    padding: 20px;
+    color: #666;
+    box-sizing: border-box;
+    min-height: 300px;
+}
+/*我的主页*/
+.home{
+    overflow: hidden;
+}
+.home_left{
+    float: left;
+    width: 197px;
+    border-right: 1px solid #ddd;
+    padding: 0 20px;
+}
+.home_right{
+    float: left;
+    width: 900px;
+    padding: 0 20px;
+}
+.home .info{
+    text-align: center;
+}
+.home .info img{
+    width: 80px;
+}
+.home_menu{
+    overflow: hidden;
+    text-align: center;
+    margin: 40px 0 0 0;
+    border-top: 1px solid #ddd;
+}
+.home_menu li{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+.home_menu li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+.home_menu li a:hover{
+    color: #fb6b25;
+}
+.home_menu li a.on{
+    background: #f1f1f1;
+    color: #fb6b25;
+}
+.home_list{
+    margin: 0 0 20px 0;
+}
+.home_list li{
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px dotted #ccc;
+}
+.home_list .p_titel{
+    width: 70%;
+    float: left;
+}
+.home_list .p_time{
+    width: 30%;
+    float: right;
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+}
+.home_list li a{
+    display: block;
+    overflow: hidden;
+}
+.home_list li:hover{
+    background: #fafafa;
+}
+.home_right .t{
+    border-bottom: 2px solid #ddd;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+/*教程管理*/
+.course_manage{
+    overflow: hidden;
+}
+.course_manage li{
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 36px;
+}
+.course_manage li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 160px;
+    padding: 65px 20px 0 20px;
+    box-sizing: border-box;
+    background: url("../images/book.jpg");
+    background-size: 160%;
+}
+.course_manage li:hover{
+    box-shadow: 0 10px 15px #f5f5f5;
+}
+.course_manage li a.add{
+    font-size: 50px;
+    padding: 0;
+    height: 200px;
+    line-height: 200px;
+    background: none;
+}
+.course_manage div{
+    overflow: hidden;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.course_manage span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.4;
+}
+.course_manage span:hover{
+    opacity: 1;
+}
+.course_manage .modify{
+    background: url("../images/modify.png");
+    background-size: cover;
+    margin-right: 10px;
+    float: left;
+}
+.course_manage .detail{
+    background: url("../images/modify3.png");
+    background-size: cover;
+    margin-right: 10px;
+    float: left;
+}
+.course_manage .view{
+    background: url("../images/view.png");
+    background-size: cover;
+    float: left;
+}
+.course_manage .delete{
+    background: url("../images/delete.png");
+    background-size: cover;
+    float: right;
+}
+.course_t{
+    width: 1026px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.course_t h1{
+    float: left;
+    line-height: 35px;
+}
+.course_t div{
+    float: right;
+}
+.course_t .c_btn{
+    margin-left: 10px;
+}
+.course_add_1{
+    width: 1026px;
+    margin: 0 auto;
+}
+.course_add_1>li{
+    padding: 0;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.course_add_1>li>div{
+    overflow: hidden;
+    background: #fafafa;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.course_add_2{
+    margin-left: 50px;
+}
+.course_add_2 li{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    overflow: hidden;
+    background: #f1f1f1;
+    margin: 10px 0;
+}
+.course_add_2 a:hover{
+    color: #fb6b25;
+}
+.course_add_2 li.add{
+    text-align: center;
+    cursor: pointer;
+    padding-left: 0;
+}
+.course_add_2 li.add:hover{
+    background: #ddd;
+}
+.course_add_1 a{
+    float: left;
+    color: #666;
+}
+.course_add_1 img{
+    float: right;
+    width: 18px;
+    cursor: pointer;
+    margin: 11px 10px 0 3%;
+    opacity: 0.4;
+}
+.course_add_1 .m img{
+    opacity: 0.7;
+}
+.course_add_1 a img{
+    margin: 14px 0 0 5px;
+    width: 12px;
+}
+.course_add_1.course_add_cont img{
+    float: none;
+    width: auto;
+    cursor: auto;
+    margin: 0;
+    opacity: 1;
+}
+.course_add_cont td{
+    padding: 10px 0;
+}
+.course_add_cont .txt{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+.course_add_cont input[type=radio]{
+    margin-left: 20px;
+    margin-right: 3px;
+}
+    /*弹出框*/
+.create_main{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    background: url("../images/bg50.png");
+}
+.create_cont{
+    width: 900px;
+    background: #fff;
+    margin: 200px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.create_cont .t{
+    width: 100%;
+    height: 45px;
+    background: #272d33;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.create_cont .t span{
+    color: #fff;
+    float: right;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+}
+.course_add_cont2{
+    width: 90%;
+    margin: 50px auto;
+}
+#editor{
+    width: 100%;
+}
+.w-e-toolbar{
+    width: 100%;
+}
+#pop_box{
+    display: none;
+}
+.confirm_popbox{
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg0.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+}
+.confirm_popbox>div{
+    width: 400px;
+    height: 180px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 50px;
+    margin:  300px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0px 50px 150px #999;
+}
+.confirm_popbox div{
+    font-size: 16px;
+}
+.confirm_popbox button{
+    margin: 30px 30px 0 30px;
+}
+.pop_box{
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg0.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+}
+.pop_box>div{
+    width: 400px;
+    height: 180px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 50px;
+    margin:  300px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0px 50px 150px #999;
+}
+.pop_box button{
+    margin-top: 30px;
+}
+.pop_box h1{
+    font-size: 18px;
+}
+a.pop{
+    margin-top: 20px;
+}
+/*滑动到顶*/
+.scrolltotop{
+    width: 40px;
+    height:40px;
+    background: #fff;
+    border:2px solid #aaa;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+.scrolltotop:hover{
+    background: #fafafa;
+}
+.scrolltotop img{
+    width: 30px;
+    opacity: 0.5;
+    margin:5px 0 5px 3px;
+}
+
+/*兼容性*/
+@media screen and (max-width: 1024px) {
+    .nav_logo h1{
+        display: none;
+    }
+    .nav_menu li{
+        margin: 0 0 0 20px;
+    }
+    .cont_left{
+        display: none;
+        padding: 0 0 50px 30px;
+        margin-top: -40px;
+    }
+    .main{
+        width: 100%;
+    }
+    .cont_right{
+        width: 100%;
+        padding: 5%;
+    }
+    .mobile_list{
+        display: block;
+    }
+    .forum{
+        width: 100%;
+        padding:5%;
+    }
+    .forum_page_list .p_titel{
+        width: 100%;
+        font-size: 14px;
+    }
+    .forum_page_list .p_time{
+        width: 50%;
+    }
+    .forum_page_list .p_author{
+        width: 50%;
+    }
+    .course_list{
+        margin-bottom: 20px;
+    }
+    .course_list_item a{
+        padding: 10px;
+        height: 40px;
+    }
+    .course_list_item img,.course_list_item p{
+        display: none;
+    }
+    .cont_right .course_list_item h3{
+        font-size: 14px;
+    }
+    .course_manage li{
+        width: 40%;
+        margin: 4.5%;
+    }
+    .course_t{
+        width: 100%;
+    }
+    .course_add_1{
+        width: 100%;
+    }
+    .create_cont{
+        width: 100%;
+    }
+    .home_left{
+        display: none;
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+    .home_right{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+   #prev{
+    background: #fafafa;
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+    color: #f56722;
+    float: left;
+    margin-left: 200px;
+   }
+   #next{
+    background: #fafafa;
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+    color: #f56722;
+    float: right;
+    margin-right: 200px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #prev{
+    background: #fafafa;
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+    color: #f56722;
+    float: left;
+    margin-left: 100px;
+   }
+   #next{
+    background: #fafafa;
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+    color: #f56722;
+    float: right;
+    margin-right: 100px;
+   }
+}
+
+.see_page{
+    height: 20px;
+    vertical-align: -5px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+/*前台页面*/
+.page_style h1, .page_style h2, .page_style h3, .page_style h4, .page_style h5{
+    margin: 20px 0;
+}
+.page_style pre{
+    background: #f5f5f5;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    padding: 10px;
+}
+.page_style blockquote{
+    background: #FFFAF0;
+    border: 1px solid #fae7c8;
+    border-left-width: 5px;
+    border-radius: 3px;
+    margin: 20px 0;
+    padding: 10px;
+}
+.page_style table{
+    border-right: 1px solid #e1e1e1;
+    margin: 20px 0;
+    border-spacing:0px;
+}
+.page_style table th{
+    background: #f5f5f5;
+    border: 1px solid #e1e1e1;
+    height: 40px;
+    line-height: 40px;
+    border-right: none;
+    text-align: left;
+    padding-left: 10px;
+}
+.page_style table td{
+    border: 1px solid #e1e1e1;
+    height: 40px;
+    line-height: 40px;
+    border-top: none;
+    border-right: none;
+    padding-left: 10px;
+}
+.page_style ul li{
+    list-style: disc inside;
+    line-height: 30px;
+}
+.page_style ol li{
+    list-style: inside decimal;
+    line-height: 30px;
+}
+.page_style p{
+    margin: 0;
+}
+.page_style img{
+    margin: 10px 20px 10px 0;
+}
+.page_style p span{
+    font-size: 14px;
+}
+#edit_code{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>_html教程</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--文章内容区-->
+<div class="container">
+    <div class="main">
+        <!--文章左侧菜单-->
+        <div class="cont_left" id="cont_left">
+            <div class="menu_left_title"><a href='/jiaocheng/40/html5.html' class='link_li'><b>html教程</b></a>
+</div>
+            <dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">第一章<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/40/html5/74/html-intro.html" >HTML 简介1</a></dd>
+       <dd><a href="/jiaocheng/40/html5/80/HTML简介2.html" >HTML 简介2</a></dd>
+       <dd><a href="/jiaocheng/40/html5/75/daima.html" >代码</a></dd>
+       <dd><a href="/jiaocheng/40/html5/79/测试.html" >测试</a></dd>
+</dl>
+
+        </div>
+        <!--移动端菜单切换-->
+        <div class="mobile_list" onclick="toggleMenu('cont_left','cont_right')"><img src="/images/menu_list.png" alt=""></div>
+        <!--右侧文章内容-->
+        <div class="cont_right" id="cont_right">
+            <h2 class="book_title">html教程</h2>
+            <p>参考https://www.w3school.com.cn/tags/index.asp</p><p><br></p><p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p><p>您可以使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析。</p><p>在本教程中，您将学习如何使用 HTML 来创建站点。</p><p>HTML 很容易学习！相信您能很快学会它！</p>
+            <div class="next_page"><a id="prev" href="javascript:void(0)">已经是第一章节了</a><a id="next" href="/jiaocheng/40/html5/74/html-intro.html">下一章</a></div>
+        </div>
+    </div>
+</div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

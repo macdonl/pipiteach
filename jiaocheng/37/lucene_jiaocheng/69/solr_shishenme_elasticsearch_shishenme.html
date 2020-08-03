@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Solr是什么？ElasticSearch是什么？_lucene教程</title>
+    <meta name="keywords" content="Solr是什么？ElasticSearch是什么？" />
+    <meta name="description" content="Solr是什么？ElasticSearch是什么？" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--文章内容区-->
+<div class="container">
+    <div class="main">
+        <!--文章左侧菜单-->
+        <div class="cont_left" id="cont_left">
+            <div class="menu_left_title"><a href='/jiaocheng/37/lucene_jiaocheng.html' class='link_li'><b>lucene教程</b></a>
+</div>
+            <dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">资料<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/64/qianyan.html" >前言</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/65/lucene_shuji_tuijian.html" >lucene书籍推荐</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">lucene原理<img src="/images/arrows.png" alt=""></dt>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/72/sousuoyinqing_shishenme.html" >搜索引擎是什么</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/66/shenme_shihou_shiyong_sousuoyinqing.html" >什么时候应该考虑使用搜索引擎?</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/67/lucene_shishenme.html" >lucene是什么</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/68/lucene_mysql_oracle_qubie.html" >lucene、mysql、oracle的区别？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/69/solr_shishenme_elasticsearch_shishenme.html"  class="on" >Solr是什么？ElasticSearch是什么？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/70/solr_elasticsearch_de_qubie.html" >solr与elasticsearch的区别？</a></dd>
+       <dd><a href="/jiaocheng/37/lucene_jiaocheng/71/lucene_yuanli_shishenme.html" >lucene原理是什么？</a></dd>
+</dl>
+<dl class="menu_left_list">
+   <dt onclick="flexMenu(event)">lucene快速使用<img src="/images/arrows.png" alt=""></dt>
+</dl>
+
+        </div>
+        <!--移动端菜单切换-->
+        <div class="mobile_list" onclick="toggleMenu('cont_left','cont_right')"><img src="/images/menu_list.png" alt=""></div>
+        <!--右侧文章内容-->
+        <div class="cont_right page_style" id="cont_right">
+            <h2 class="book_title">Solr是什么？ElasticSearch是什么？_lucene教程</h2>
+            <p>solr是什么？(链接)elasticsearch是什么？(链接)(视频)</p>
+                <p>之所以把solr与elasticsearch放在一起说，是因为它们的底层都是lucene，再lucene提供的功能上进行了二次开发，附加了众多的功能，是搜索引擎的一个完整解决方案，属于企业级[我理解的企业级，开箱即用]的搜索引擎平台。它们都提供用户操作控制台；提供RESTful风格编程接口，也就是说它可以被任何编程语言使用；提供分布式搜索功能，不用再担心数据增多。
+                </p>
+                <p>另外说一句，它们的关系好比是oracle与mysql(它们都是关系型数据库)。</p>
+                <h1><a name="lucenesolrqubie">lucene与solr(elasticsearch)的区别？</a></h1>
+                <table class="common-table">
+                    <tbody>
+                        <tr>
+                            <th><br></th>
+                            <th>Lucene</th>
+                            <th>Solr/Elasticsearch</th>
+                        </tr>
+                        <tr>
+                            <td>是Java jar包<br></td>
+                            <td>是<br></td>
+                            <td>不是<br></td>
+                        </tr>
+                        <tr>
+                            <td>是Web应用<br></td>
+                            <td>不是<br></td>
+                            <td>是<br></td>
+                        </tr>
+                        <tr>
+                            <td>提供用户操作控制台<br></td>
+                            <td>不提供<br></td>
+                            <td>提供<br></td>
+                        </tr>
+                        <tr>
+                            <td>提供RESTful风格编程接口<br></td>
+                            <td>不提供<br></td>
+                            <td>提供<br></td>
+                        </tr>
+                        <tr>
+                            <td>提供分布式搜索功能<br></td>
+                            <td>不提供<br></td>
+                            <td>提供<br></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>既然如上所说，solr/Elasticsearch功能比lucene强大太多，我还需要学习lucene吗？</p>
+                <p>这里可以给肯定的答复，如果只满足于简单使用搜索引擎这一初级阶段，跳过lucene，直接学习使用Solr/ElasticSearch也是可以的。但是想要得心应手，必定要深入学习lucene，lucene是高楼大厦的地基，地基打的好，楼房才能又高又稳。
+                </p>
+                <p>另外，也有lucene适用，Solr/ElasticSearch反而不适用的场景。</p>
+                <p>例如:为手机文件管理app提供，根据搜索词，搜索内容包含搜索词的文件列表。这里用内嵌的jar的方式开发反而更为恰当。如果用Solr、ElasticSearch开发，你需要搭建Solr、ElasticSearch服务，我们不能在手机用户手机上搭建服务，需要在服务器上搭建，用户的数据需要上传到服务器端，才能为用户提供服务，特别繁杂。
+                </p>
+                <p>我的意见是一定要深入学习lucene，但在使用选择上尽量使用Solr/ElasticSearch，能不用Lucene就别单独使用Lucene。单说一点，随着数据量上升，单机已经承受不住性能，你需要为lucene做二次开发，使其支持分布式。而Solr/ElasticSearch作为成熟的企业级搜索引擎解决方案，早已经提供了分布式。
+                </p>
+            <div class="next_page"><a id="prev" href="/jiaocheng/37/lucene_jiaocheng/68/lucene_mysql_oracle_qubie.html">上一章</a><a id="next" href="/jiaocheng/37/lucene_jiaocheng/70/solr_elasticsearch_de_qubie.html">下一章</a></div>
+        </div>
+    </div>
+</div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+</body>
+</html>

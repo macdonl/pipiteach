@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>章节编辑页-教程书</title>
+    <meta name="keywords" content="[###SeoKeywords###]" />
+    <meta name="description" content="[###SeoDescription###]" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device"content="pc,mobile" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="bookmark" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script type="text/javascript" charset="utf-8" src="/uedtior/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/uedtior/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/uedtior/lang/zh-cn/zh-cn.js"></script>
+<!--    <link href="/framework/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">-->
+<!--    <script type="text/javascript" src="/framework/umeditor/third-party/jquery.min.js"></script>-->
+<!--    <script src="/framework/umeditor/third-party/template.min.js"></script>-->
+<!--    <script type="text/javascript" charset="utf-8" src='/framework/umeditor/umeditor.config.js'></script>-->
+<!--    <script type="text/javascript" charset="utf-8" src='/framework/umeditor/umeditor.min.js'></script>-->
+<!--    <script type="text/javascript" charset="utf-8" src='/framework/umeditor/lang/zh-cn/zh-cn.js'></script>-->
+</head>
+<body id="body">
+<!--通用顶部导航-->
+<div class="nav">
+    <div class="nav_logo"><a href="/"><img src="/images/logo.png" alt="教程书"><h1>教程书</h1></a></div>
+    <ul class="nav_menu">
+        <li><a href="/course/lucene_course.html" class="on">教程</a></li>
+        <!--<li><a href="/forum/forum.html">论坛</a></li>-->
+        <li><a href="#">工具</a></li>
+    </ul>
+    <div class="nav_login" id="nav">
+        <a href="/login.html">
+            <span class="myhead"></span>
+        </a>
+    </div>
+</div>
+<!--内容区-->
+<div id="section_content"></div>
+<script type="text/template" id="course_list_template">
+<div class="forum">
+    <div class="t course_t"><h1><span id="book_name"></span> > <span id="chapter_name"></span> > </h1><div><a href="javascript:void(0)" onclick="goBack()" class="c_btn">返回</a></div></div>
+    <table border="0" cellpadding="0" cellspacing="0" id="section_info" class="course_add_1 course_add_cont">
+        <tr>
+            <td width="100">节名称</td>
+            <td><input type="text" class="txt" name="name" value="{{Section.BookSectionName}}"></td>
+        </tr>
+        <tr>
+            <td>节的描述</td>
+            <td><input type="text" name="section_description" value="{{Section.BookSectionDescription}}" class="txt"></td>
+        </tr>
+        <tr>
+            <td>节内容</td>
+            <td><div id="editor" style="width: 926px; height: 500px"></div></td>
+        </tr>
+<!--        <tr>
+            <td>插入图片</td>
+            <td><li><input type="file" class="" name="upload_img"></li></td>
+        </tr>-->
+        <tr>
+            <td>SEO网址</td>
+            <td><input type="text" name="seo_url" value="{{Section.SeoUrl}}" class="txt"></td>
+        </tr>
+        <tr>
+            <td>SEO标题</td>
+            <td><input type="text" name="seo_title" value="{{Section.SeoTitle}}" class="txt"></td>
+        </tr>
+        <tr>
+            <td>SEO关键字</td>
+            <td><input type="text" name="seo_keywords" value="{{Section.SeoKeywords}}" class="txt"></td>
+        </tr>
+        <tr>
+            <td>SEO描述</td>
+            <td><input type="text" name="seo_description" value="{{Section.SeoDescription}}" class="txt"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" class="c_btn c_btn_imp" onclick="modifySection()" value="提交"></td>
+        </tr>
+    </table>
+
+</div>
+<!--    <div id="co">{{Section.BookSectionContent}}</div>-->
+</script>
+<!--<script id="myEditor" type="text/plain" style="width:1024px;height:500px;"></script>-->
+<div id="pop_box_container" style="display: none"></div>
+<div class="scrolltotop" id="scrolltotop"><img src="/images/arrows2.png" alt=""></div>
+<script src="/js/jQuery.js"></script>
+<script src="/js/template.js"></script>
+<script src="/js/js.js"></script>
+<script id="common_auto_login_js" src="/js/common_auto_login.js" data="home_page"></script>
+<!--<script type="text/javascript" src='/framework/editor/release/wangEditor.min.js'></script>-->
+<script src="/js/course/course_publish3.js"></script>
+
+</body>
+</html>
